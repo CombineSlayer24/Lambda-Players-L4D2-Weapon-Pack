@@ -72,7 +72,7 @@ function LAMBDA_L4D2:SwingMeleeWeapon( lambda, weapon, target )
     end
 
     local swingRate = weapon.L4D2Data.RateOfFire or 0.1
-    if istable( swingRate ) then swingRate = Rand( swingRate[ 1 ], swingRate[ 2 ] ) end
+    if istable( swingRate ) then swingRate = random( swingRate[ 1 ], swingRate[ 2 ] ) end
     lambda.l_WeaponUseCooldown = CurTime() + swingRate
 
     lambda:SimpleTimer( weapon.L4D2Data.HitDelay or 0.25, function()        
@@ -141,7 +141,7 @@ function LAMBDA_L4D2:FireWeapon( lambda, weapon, target )
     lambda.l_Clip = lambda.l_Clip - ( weapon.L4D2Data.ClipUsage or 1 )
 
     local fireRate = weapon.L4D2Data.RateOfFire or 0.1
-    if istable( fireRate ) then fireRate = Rand( fireRate[ 1 ], fireRate[ 2 ] ) end
+    if istable( fireRate ) then fireRate = random( fireRate[ 1 ], fireRate[ 2 ] ) end
     lambda.l_WeaponUseCooldown = CurTime() + fireRate
 
     local fireAnim = weapon.L4D2Data.Animation

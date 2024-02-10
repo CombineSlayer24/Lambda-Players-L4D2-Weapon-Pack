@@ -1,5 +1,5 @@
 local fireDamageTbl = { 24, 26 }
-local fireRateTbl = { 0.275, 0.4 }
+local fireRateTbl = { 0.275, 0.5 }
 
 table.Merge( _LAMBDAPLAYERSWEAPONS, {
     l4d2_sniper_military = {

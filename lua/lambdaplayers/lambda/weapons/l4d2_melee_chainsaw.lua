@@ -25,7 +25,7 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
         holdtype = "physgun",
         killicon = "lambdaplayers/killicons/icon_l4d2_melee_chainsaw",
         ismelee = true,
-        keepdistance = 10,
+        keepdistance = 30,
         attackrange = 70,
         bonemerge = true,
         islethal = true,
@@ -42,6 +42,11 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
 
             wepent.IdleSound = CreateSound( wepent, "lambdaplayers/weapons/l4d2/melee/chainsaw/chainsaw_idle_lp_01.wav" )
             wepent.AttackSound = CreateSound( wepent, "lambdaplayers/weapons/l4d2/melee/chainsaw/chainsaw_high_speed_lp_01.wav" )
+
+            if random( 1, 3 ) == 1 then 
+                local skinCount = wepent:SkinCount()
+                if skinCount > 0 then wepent:SetSkin( random( 0, skinCount - 1 ) ) end
+            end
 
             wepent:CallOnRemove( "LambdaChainsaw_KillSounds" .. wepent:EntIndex(), KillSounds )
         end,

@@ -17,7 +17,7 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
         holdtype = "melee2",
         killicon = "lambdaplayers/killicons/icon_l4d2_melee_cricket_bat",
         ismelee = true,
-        keepdistance = 10,
+        keepdistance = 40,
         attackrange = 80,
         bonemerge = true,
         islethal = true,
@@ -33,7 +33,10 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
             wepent.L4D2Data.DamageForce = dmgForceTbl
             wepent.L4D2Data.HitSound = hitSndTbl
 
-            if random( 1, 5 ) == 1 then wepent:SetSkin( 1 ) end
+            if random( 1, 3 ) == 1 then 
+                local skinCount = wepent:SkinCount()
+                if skinCount > 0 then wepent:SetSkin( random( 0, skinCount - 1 ) ) end
+            end
             wepent:EmitSound( "lambdaplayers/weapons/l4d2/melee/melee_deploy_1.mp3", 60, 100, 1, CHAN_ITEM )
         end,
 

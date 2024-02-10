@@ -4,7 +4,7 @@ local random = math.random
 local coroutine_wait = coroutine.wait
 
 local fireDamageTbl = { 8, 10 }
-local fireRateTbl = { 0.3, 0.5 }
+local fireRateTbl = { 0.3, 0.6 }
 local deploySnds = {
     { 0, "lambdaplayers/weapons/l4d2/shotgun_spas/gunother/autoshotgun_deploy_1.mp3" },
     { 0.33, "lambdaplayers/weapons/l4d2/shotgun_spas/gunother/autoshotgun_boltback.mp3" },

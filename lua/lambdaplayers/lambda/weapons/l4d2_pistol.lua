@@ -1,5 +1,5 @@
 local fireDamageTbl = { 11, 13 }
-local fireRateTbl = { 0.175, 0.35 }
+local fireRateTbl = { 0.275, 0.5 }
 local deploySnds = {
     { 0, "lambdaplayers/weapons/l4d2/pistol/gunother/pistol_deploy_1.mp3" },
     { 0.2, "lambdaplayers/weapons/l4d2/pistol/gunother/pistol_slideback_1.mp3" },

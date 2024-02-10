@@ -6,7 +6,7 @@ local random = math.random
 local coroutine_wait = coroutine.wait
 
 local fireDamageTbl = { 7, 9 }
-local fireRateTbl = { 0.8, 1.2 }
+local fireRateTbl = { 0.8, 1.6 }
 local deploySnds = { { 0, "lambdaplayers/weapons/l4d2/shotgun_pump/gunother/shotgun_deploy_1.mp3" } }
 
 table.Merge( _LAMBDAPLAYERSWEAPONS, {

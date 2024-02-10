@@ -1,0 +1,21 @@
+VertexLitGeneric
+{
+	$baseTexture "lambdaplayers\models\weapons\l4d2\melee\machete\Machete_rusty"
+	$bumpmap "lambdaplayers\models\weapons\l4d2\melee\machete\machete_rusty_normal"
+
+	$envmap "env_cubemap"
+	$normalmapalphaenvmapmask 1
+	$envmaptint "[0.05 0.05 0.05]"
+	$envmapfresnel 1
+
+	$phong 1
+	$phongfresnelranges "[2 4 6]"
+	$halflambert 1
+	$phongalbedotint 1
+	$phongexponent 65
+	$phongboost 2
+	
+	$rimlight 1
+	$rimlightexponent 50
+	$rimlightboost 0.2
+}

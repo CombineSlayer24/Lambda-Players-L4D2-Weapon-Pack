@@ -1,4 +1,4 @@
-local rofTbl = { 0.8, 1.0 }
+local rofTbl = { 0.8, 1.25 }
 local dmgTbl = { 40, 50 }
 local dmgForceTbl = { Forward = 150, Right = -75, Up = 125 }
 local hitSndTbl = {
@@ -6,6 +6,7 @@ local hitSndTbl = {
     "lambdaplayers/weapons/l4d2/melee/bat/melee_cricket_bat_02.mp3",
     "lambdaplayers/weapons/l4d2/melee/bat/melee_cricket_bat_03.mp3"
 }
+local random = math.random
 
 table.Merge( _LAMBDAPLAYERSWEAPONS, {
     l4d2_melee_baseball_bat = {
@@ -15,7 +16,7 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
         holdtype = "melee2",
         killicon = "lambdaplayers/killicons/icon_l4d2_melee_baseball_bat",
         ismelee = true,
-        keepdistance = 10,
+        keepdistance = 40,
         attackrange = 70,
         bonemerge = true,
         islethal = true,
@@ -30,6 +31,11 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
             wepent.L4D2Data.DamageType = DMG_CLUB
             wepent.L4D2Data.DamageForce = dmgForceTbl
             wepent.L4D2Data.HitSound = hitSndTbl
+
+            if random( 1, 3 ) == 1 then 
+                local skinCount = wepent:SkinCount()
+                if skinCount > 0 then wepent:SetSkin( random( 0, skinCount - 1 ) ) end
+            end
 
             wepent:EmitSound( "lambdaplayers/weapons/l4d2/melee/melee_deploy_1.mp3", 60, 100, 1, CHAN_ITEM )
         end,

@@ -1,4 +1,5 @@
 local fireDamageTbl = { 16, 18 }
+local rofTbl = { 0.13, 0.27 }
 local deploySnds = {
     { 0, "lambdaplayers/weapons/l4d2/rifle_ak47/gunother/rifle_deploy_1.mp3" },
     { 0.366, "lambdaplayers/weapons/l4d2/rifle_ak47/gunother/rifle_slideback.mp3" },
@@ -35,7 +36,7 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
             wepent.L4D2Data.Damage = fireDamageTbl
             wepent.L4D2Data.Spread = 0.1125
             wepent.L4D2Data.Sound = "lambdaplayers/weapons/l4d2/rifle_ak47/gunfire/rifle_fire_1.mp3"
-            wepent.L4D2Data.RateOfFire = 0.13
+            wepent.L4D2Data.RateOfFire = rofTbl
             wepent.L4D2Data.Animation = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
             wepent.L4D2Data.EjectShell = "RifleShellEject"
             wepent.L4D2Data.DeploySound = deploySnds

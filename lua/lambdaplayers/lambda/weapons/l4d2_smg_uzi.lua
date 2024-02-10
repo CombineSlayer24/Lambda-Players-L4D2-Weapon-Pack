@@ -1,4 +1,5 @@
 local fireDamageTbl = { 6, 8 }
+local fireRateTbl = { 0.0625, 0.175 }
 local deploySnds = {
     { 0, "lambdaplayers/weapons/l4d2/smg_uzi/gunother/smg_deploy_1.mp3" },
     { 0.33, "lambdaplayers/weapons/l4d2/smg_uzi/gunother/smg_slideback_1.mp3" },
@@ -10,7 +11,7 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
         model = "models/lambdaplayers/weapons/l4d2/w_smg_uzi.mdl",
         origin = "Left 4 Dead 2",
         prettyname = "SMG",
-        holdtype = "pistol",
+        holdtype = "ar2",
         killicon = "lambdaplayers/killicons/icon_l4d2_smg_uzi",
         bonemerge = true,
 
@@ -35,7 +36,7 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
             wepent.L4D2Data.Damage = fireDamageTbl
             wepent.L4D2Data.Spread = 0.1
             wepent.L4D2Data.Sound = "lambdaplayers/weapons/l4d2/smg_uzi/gunfire/smg_fire_1.mp3"
-            wepent.L4D2Data.RateOfFire = 0.0625
+            wepent.L4D2Data.RateOfFire = fireRateTbl
             wepent.L4D2Data.Animation = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
             wepent.L4D2Data.DeploySound = deploySnds
 

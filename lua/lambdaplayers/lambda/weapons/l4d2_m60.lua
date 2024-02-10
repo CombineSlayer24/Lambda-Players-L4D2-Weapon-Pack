@@ -1,5 +1,6 @@
 local net = net
 local fireDamageTbl = { 20, 24 }
+local rofTbl = { 0.11, 0.26 }
 
 local function OnM60Reload( self )
     if self:GetWeaponName() == "l4d2_m60" then return end
@@ -25,7 +26,7 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
             wepent.L4D2Data.Damage = fireDamageTbl
             wepent.L4D2Data.Spread = 0.133
             wepent.L4D2Data.Sound = "lambdaplayers/weapons/l4d2/m60/gunfire/machinegun_fire_1.mp3"
-            wepent.L4D2Data.RateOfFire = 0.11
+            wepent.L4D2Data.RateOfFire = rofTbl
             wepent.L4D2Data.Animation = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
             wepent.L4D2Data.EjectShell = "RifleShellEject"
             wepent.L4D2Data.MuzzleFlash = 7

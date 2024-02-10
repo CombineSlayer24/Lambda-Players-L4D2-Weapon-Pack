@@ -4,6 +4,7 @@ local hitSndTbl = {
     "lambdaplayers/weapons/l4d2/melee/tonfa/melee_tonfa_01.mp3",
     "lambdaplayers/weapons/l4d2/melee/tonfa/melee_tonfa_02.mp3"
 }
+local random = math.random
 
 table.Merge( _LAMBDAPLAYERSWEAPONS, {
     l4d2_melee_tonfa = {
@@ -13,7 +14,7 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
         holdtype = "melee",
         killicon = "lambdaplayers/killicons/icon_l4d2_melee_tonfa",
         ismelee = true,
-        keepdistance = 10,
+        keepdistance = 40,
         attackrange = 70,
         bonemerge = true,
         islethal = true,
@@ -27,6 +28,11 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
             wepent.L4D2Data.Damage = dmgTbl
             wepent.L4D2Data.DamageType = DMG_CLUB
             wepent.L4D2Data.HitSound = hitSndTbl
+
+            if random( 1, 3 ) == 1 then 
+                local skinCount = wepent:SkinCount()
+                if skinCount > 0 then wepent:SetSkin( random( 0, skinCount - 1 ) ) end
+            end
 
             wepent:EmitSound( "lambdaplayers/weapons/l4d2/melee/melee_deploy_1.mp3", 60, 100, 1, CHAN_ITEM )
         end,

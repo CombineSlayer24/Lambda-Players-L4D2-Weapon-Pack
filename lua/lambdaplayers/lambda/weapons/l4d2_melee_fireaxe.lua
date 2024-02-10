@@ -1,3 +1,4 @@
+local random = math.random
 local rofTbl = { 0.9, 1.1 }
 local dmgTbl = { 70, 75 }
 local hitSndTbl = {
@@ -27,6 +28,11 @@ table.Merge( _LAMBDAPLAYERSWEAPONS, {
             wepent.L4D2Data.Range = 65
             wepent.L4D2Data.Damage = dmgTbl
             wepent.L4D2Data.HitSound = hitSndTbl
+
+            if random( 1, 3 ) == 1 then 
+                local skinCount = wepent:SkinCount()
+                if skinCount > 0 then wepent:SetSkin( random( 0, skinCount - 1 ) ) end
+            end
             
             wepent:EmitSound( "lambdaplayers/weapons/l4d2/melee/melee_deploy_1.mp3", 60, 100, 1, CHAN_ITEM )
         end,

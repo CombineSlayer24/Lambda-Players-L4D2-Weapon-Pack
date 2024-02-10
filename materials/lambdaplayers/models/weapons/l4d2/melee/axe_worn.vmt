@@ -1,0 +1,18 @@
+VertexLitGeneric
+{
+	$baseTexture "lambdaplayers\models\weapons\l4d2\melee\axe_worn"
+	$bumpmap "lambdaplayers\models\weapons\l4d2\melee\4melee_weapons_normal"
+
+	$phong                      1
+	$phongboost                 1
+	$phongfresnelranges         "[1 2.5 0.5]"
+	$phongtint                  "[.8 .8 1]"
+	$phongexponenttexture "lambdaplayers\models\weapons\l4d2\melee\axe_worn_exp"
+	$normalmapalphaphongmask    1
+
+	$envmap                     env_cubemap
+	$envmaptint                 "[.004 .004 .004]"
+	$envmapfresnel              1
+	$envmapFresnelMinMaxExp     "[0 0 .5]"
+	$normalmapalphaenvmapmask   1
+}
